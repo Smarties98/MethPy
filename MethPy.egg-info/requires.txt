@@ -1,0 +1,9 @@
+biopython
+matplotlib
+numpy
+openpyxl
+pandas
+python-docx
+seaborn
+xlsxwriter
+xlwings
