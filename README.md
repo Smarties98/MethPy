@@ -1,6 +1,6 @@
 # MethPy
 
-![logo](logo.png)
+![logo](Logo.png)
 ![Copyright](https://img.shields.io/badge/copyright-2025-blue?style=for-the-badge)
 ![Version](https://img.shields.io/badge/V_1.0-yellow)
 
