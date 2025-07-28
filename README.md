@@ -190,7 +190,11 @@ The module opens a popup window asking for information:
 In this a specific range of bases to take into consideration can be specified. If a number is inserted in "Same error value for all the bases" that value is used to add an error bar to all the cytosine present in the graph, while "Custom errors for each base; enter a comma-separated list of numbers" takes a list separated to comma and at each cytosine adds a different error bar, if the values are not enough, the last cytosines will have an error of zero. "Dysplay the error cap" can be checked to add the error caps to the error bars.
 
 The button referring to "Custom chart colors" open the following window:
+
 ![chart3](Images/chart3.png)
+
+In this the colors of the bars can be selected as well as if displaing or not the percentage over each bar. The initial color are red for the CpG cytosines, while gray for the non-CpG ones. After the first time if new colors are selected they are saved and showed as the new default colors.
+
 ![chart4](Images/chart4.jpg)
 ![chart5](Images/chart5.jpg)
 ![chart6](Images/chart6.jpg)
