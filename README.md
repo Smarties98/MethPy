@@ -9,7 +9,7 @@
 
 MethPy is a Python toolkit for the analysis and visualization of DNA methylation data, with features for quality control, table and graph generation, and management of reference datasets.
 
-## :clipboard: Table of Contents
+## :pushpin: Table of Contents
 1. [Main Features](#header1)
 2. [Installation](#header2)
 3. [Usage](#header3)
@@ -133,6 +133,12 @@ Run `table.py` to generate a summary table of the data obtained from a single fo
 
 > [!TIP]
 > Place all input data related to a single target gene and a single experimental condition within a subdirectory, which may be located inside a nested folder structure, to generate a summary table and subsequently a plot for that specific gene under that condition.
+
+![table1](Images/table1.png)
+
+![table2](Images/table2.png)
+
+![table3](Images/table3.png)
 
 
 
