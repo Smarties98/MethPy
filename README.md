@@ -129,9 +129,9 @@ The text file is saved in `./Output in txt` and in the same subfolders present i
 The word file is saved in `./Output in word` and in the same subfolders present in `./Input`. The first row is the name of the sequence, then there is which strand it is and then the actual sequence. It is divided in blocks of ten nucleotides and in the left there is the position of the first base relatively to the beginning of the reference. All the error and cytosine, or converted cytosine, are highlighted, the color code is explained in the document together with some positions that could be interesting, i.e. where there is an insertion (in that case the nucleotide is removed and the info can be useful where checking the input sequence), all the positions where there is a methylated cytosine and all the ones of cytosines with an unkown methylation status.
 
 #### :card_file_box: Table<a name="header8"/>
-
-
-
+Run `table.py` to generate a summary table of the data obtained from a single folder.
+[!TIP]
+Place all input data related to a single target gene and a single experimental condition within a subdirectory, which may be located inside a nested folder structure, to generate a summary table and subsequently a plot for that specific gene under that condition.
 #### :bar_chart: Plot<a name="header9"/>
 
 
