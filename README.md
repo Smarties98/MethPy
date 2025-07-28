@@ -130,12 +130,25 @@ The word file is saved in `./Output in word` and in the same subfolders present 
 
 #### :card_file_box: Table<a name="header8"/>
 Run `table.py` to generate a summary table of the data obtained from a single folder.
+```python
+from methpy import table
+table ()
+```
 
 > [!TIP]
 > Place all input data related to a single target gene and a single experimental condition within a subdirectory, which may be located inside a nested folder structure, to generate a summary table and subsequently a plot for that specific gene under that condition.
 
+Once the module is started, it generates a popup window asking for different information.
+
 ![table1](Images/table1.png)
 
+The "Gene name" can be selected through a drop down menu, showing again all the references saved, while the "Condition's Folder" refered to the path of the folder to be tabulated. "Reference start position" is a which position the reference saved start, respecting to the one saved to in a database. "Do you want an xlsx file?" could be checked to obtain also a more graphical file in addition to the csv file.
+
+Th csv file is organized as following:
+|   |Colony's name|Stran|list of numers (cytocines positions)|
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
 ![table2](Images/table2.png)
 
 ![table3](Images/table3.png)
@@ -144,7 +157,10 @@ Run `table.py` to generate a summary table of the data obtained from a single fo
 
 #### :bar_chart: Plot<a name="header9"/>
 
-
+```python
+from methpy import plot
+plot ()
+```
 
 ## :file_folder: Project Structure<a name="header10"/>
 
