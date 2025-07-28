@@ -132,7 +132,7 @@ class Gene_name:
         def enter():
             self.response ["reference"] = clicked.get ()
             self.response ["file"] = entry.get ()
-            root.quit () 
+            root.destroy () 
         
         #popup characteristics
         root = tk.Tk ()
@@ -157,7 +157,6 @@ class Gene_name:
         button.place (rely = 0.75,relx = 0.5, anchor = "center")
 
         tk.mainloop ()
-        root.destroy ()
 
 #takes the forward and reverse of the reference, the sequence along the range of lenght to check
 def find_start (reference_forward, reference_reverse, sequence, number):
