@@ -1,13 +1,19 @@
 # MethPy
 
 ![Logo](Logo.png)
-![Copyright](https://img.shields.io/badge/copyright-2025-blue?style=for-the-badge)
+![Methylation](https://img.shields.io/badge/🧬_CpG_and_non--CpG_Methylation-%23f5f5f5?style=flat)
+![Copyright](https://img.shields.io/badge/copyright-2025-blue?style=flat)
 ![Version](https://img.shields.io/badge/V_1.0-yellow)
-![Methylation](https://img.shields.io/badge/Cpg_and_non-CpG-2025-Methylation-blue)
+
+
 
 MethPy is a Python toolkit for the analysis and visualization of DNA methylation data, with features for quality control, table and graph generation, and management of reference datasets.
 
-## :test_tube: Main Features
+# Table of Contents
+1. [Main Features](#header1)
+2. [Installation](#header2)
+
+## :test_tube: Main Features<a name="header1"/> 
 
 - Loading and validation of methylation data
 - Analysis and quality control (`check.py`)
@@ -16,7 +22,7 @@ MethPy is a Python toolkit for the analysis and visualization of DNA methylation
 - Table generation (`table.py`)
 - Guided execution (`start.py`, `tutorial.py`)
 
-## :rocket: Installation
+## :rocket: Installation<a name="header2"/>
 
 Must have: Python ≥ 3.8 installed.
 
