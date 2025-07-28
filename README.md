@@ -84,6 +84,12 @@ check ()
 ```
 This module will generate different popup windows. If something is wrong with the info provided the module prints a warning message.
 
+The first window asks for all the information:
+
+![check](check1.png)
+
+The "Gene 
+
 
 #### :card_file_box: Table
 
