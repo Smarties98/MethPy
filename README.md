@@ -1,7 +1,7 @@
 # MethPy
 
 ![Logo](Images/Logo.png)
-![Methylation](https://img.shields.io/badge/🧬_CpG_and_non--CpG_Methylation-%23f5f5f5?style=flat)
+![Methylation](https://img.shields.io/badge/🧬_CpG_and_non--CpG_Methylation_Analysis-%23f5f5f5?style=flat)
 ![Copyright](https://img.shields.io/badge/copyright-2025-blue?style=flat)
 ![Version](https://img.shields.io/badge/V_1.0-yellow)
 
