@@ -193,7 +193,9 @@ The button referring to "Custom chart colors" open the following window:
 
 ![chart3](Images/chart3.png)
 
-In this the colors of the bars can be selected as well as if displaing or not the percentage over each bar. The initial color are red for the CpG cytosines, while gray for the non-CpG ones. After the first time if new colors are selected they are saved and showed as the new default colors.
+In this window the colors of the bars can be selected as well as if displaing or not the percentage over each bar. The initial colors are red for the CpG cytosines and gray for the non-CpG ones. After the first time if new colors are selected they are saved and showed as the new default colors. The choice about displaying the error cap and the percentage for each bar is saved.
+
+The main graph produced is one that contains both CpG and non-CpG cytosines. But other two graphs are produced, one with just the Cpg and the other with just the non-CpG.
 
 ![chart4](Images/chart4.jpg)
 ![chart5](Images/chart5.jpg)
