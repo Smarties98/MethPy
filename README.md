@@ -13,7 +13,16 @@ MethPy is a Python toolkit for the analysis and visualization of DNA methylation
 1. [Main Features](#header1)
 2. [Installation](#header2)
 3. [Usage](#header3)
- 3.1. [Start](#subparagraph1)
+     1. [Start](#header4)
+     2. [](#header5)
+     3. [](#header6)
+     4. [](#header7)
+     5. [](#header8)
+     6. [](#header9)
+     7. [](#header10)
+4. [](#header11)
+5. [](#header12)
+
 
 ## :test_tube: Main Features<a name="header1"/> 
 
@@ -44,7 +53,7 @@ pip install git+https://github.com/Smarties98/MethPy.git
 
 Start main interface from the terminal and enter in the Python interactive interpreter by typing `python`, `python3`, or `py` in the terminal, depending on the system configuration.
 
-#### :open_file_folder: Start<a name="subparagraph1"/>
+#### :open_file_folder: Start<a name="header4"/>
 Import the module `start` and call it like a function to generate all the folders:
 ```python
 from methpy import start
@@ -61,7 +70,7 @@ cwd/
 └── Table              # Where table saves the csv and xlsx files
 ```
 
-#### :books: Tutorial 
+#### :books: Tutorial<a name="header5"/>
 
 Refer to the `tutorial.py` module to generate different examples to use as tutorial.
 ```python
@@ -70,7 +79,7 @@ tutorial ()
 ```
 They will be saved in text file in `./Input/Sequence tutorial` while the relative reference is saved as TutorialF.txt (forward) and TutorialR.txt (reverse) in `./References`.
 
-#### :bookmark: Ref
+#### :bookmark: Ref<a name="header6"/>
 Use the `ref.py` module to save the reference, both the forward and the reverse, in `./References`
 ```python
 from methpy import ref
@@ -84,7 +93,7 @@ The module generates a popup window in which all the info could be added:
 If characters different from the ones related to the nucleotides (A,T,C,G) are inserted they are conserved in the text files (both in the forward and reverse) but a warning is printed. 
 
 
-#### :heavy_check_mark: Check
+#### :heavy_check_mark: Check<a name="header7"/>
 To start the analysis use `check.py`.
 
 ```python
@@ -109,15 +118,15 @@ thymines through amplification. Every other differences between sequence and ref
 ![check3](check3.png)
 
 
-#### :card_file_box: Table
+#### :card_file_box: Table<a name="header8"/>
 
 
 
-#### :bar_chart: Plot
+#### :bar_chart: Plot<a name="header9"/>
 
 
 
-## :file_folder: Project Structure
+## :file_folder: Project Structure<a name="header10"/>
 
 ```
 methpy/
@@ -129,11 +138,11 @@ methpy/
 └── tutorial.py     # Examples
 ```
 
-## :page_facing_up: License
+## :page_facing_up: License<a name="header11"/>
 
 This project is distributed under the [MIT](./LICENSE) license.
 
-## :technologist: Author
+## :technologist: Author<a name="header12"/>
 
 Developer: Martina Roiati<br /> 
 Corresponding Author: Andrea Fuso, PhD<br />
