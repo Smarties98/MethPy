@@ -12,6 +12,8 @@ MethPy is a Python toolkit for the analysis and visualization of DNA methylation
 # Table of Contents
 1. [Main Features](#header1)
 2. [Installation](#header2)
+3. [Usage](#header3)
+ 3.1. [Start](#subparagraph1)
 
 ## :test_tube: Main Features<a name="header1"/> 
 
@@ -38,11 +40,11 @@ Using  `pip` directly:
 pip install git+https://github.com/Smarties98/MethPy.git
 ```
 
-## :compass: Usage
+## :compass: Usage<a name="header3"/>
 
 Start main interface from the terminal and enter in the Python interactive interpreter by typing `python`, `python3`, or `py` in the terminal, depending on the system configuration.
 
-#### :open_file_folder: Start
+#### :open_file_folder: Start<a name="subparagraph1"/>
 Import the module `start` and call it like a function to generate all the folders:
 ```python
 from methpy import start
