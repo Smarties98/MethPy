@@ -1,6 +1,6 @@
 # MethPy
 
-![Logo](Logo.png)
+![Logo](Images/Logo.png)
 ![Methylation](https://img.shields.io/badge/🧬_CpG_and_non--CpG_Methylation-%23f5f5f5?style=flat)
 ![Copyright](https://img.shields.io/badge/copyright-2025-blue?style=flat)
 ![Version](https://img.shields.io/badge/V_1.0-yellow)
@@ -88,7 +88,7 @@ ref ()
 
 The module generates a popup window in which all the info could be added:
 
-![ref](ref.png)
+![ref](Images/ref.png)
 
 If characters different from the ones related to the nucleotides (A,T,C,G) are inserted they are conserved in the text files (both in the forward and reverse) but a warning is printed. 
 
@@ -104,18 +104,18 @@ This module will generate different popup windows. If something is wrong with th
 
 The first window asks for all the information:
 
-![check1](check1.png)
+![check1](Images/check1.png)
 
 The "Gene name" should be selected from the dropdown menu while the "Path of the sequence" could be written or picked using the system’s file browser. The button "Enter" would start the checking.
 
 First step is to identify the beginning of the sequence compared to the reference, `check.py` asks for confirmation of the start through a popup window.  
 
-![check2](check2.png)
+![check2](Images/check2.png)
 
 The bisulfite assay converts the non-methylated cytosines in uraciles, they are converted in 
 thymines through amplification. Every other differences between sequence and reference are treated as errors.
 
-![check3](check3.png)
+![check3](Images/check3.png)
 
 
 #### :card_file_box: Table<a name="header8"/>
