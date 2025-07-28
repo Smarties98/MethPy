@@ -70,6 +70,9 @@ cwd/
 └── Table              # Where table saves the csv and xlsx files
 ```
 
+> [!TIP]
+> A nested folder structure can be created inside `./Input`, but forward and reverse sequences must be saved with the same filename, appending F or R to indicate the strand. This naming convention is required for the `table` module to correctly associate the corresponding data.
+
 #### :books: Tutorial<a name="header5"/>
 
 Refer to the `tutorial.py` module to generate different examples to use as tutorial.
@@ -144,11 +147,16 @@ Once the module is started, it generates a popup window asking for different inf
 
 The "Gene name" can be selected through a drop down menu, showing again all the references saved, while the "Condition's Folder" refered to the path of the folder to be tabulated. "Reference start position" is a which position the reference saved start, respecting to the one saved to in a database. "Do you want an xlsx file?" could be checked to obtain also a more graphical file in addition to the csv file.
 
-Th csv file is organized as following:
-|   |Colony's name|Stran|list of numers (cytocines positions)|
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+The csv file is organized as following:
+
+|   | Colony's name | Strand | list of numbers referring to the cytosines positions)|
+| ------------- | ------------- |------------- |------------- |
+| CpG presence | |   |0 (no CpG) or  CpG |
+| 0 | | | numbers referring to the position relative to the sequence in the database |
+| 1 | Sequence name | Strand (F, R or F-R) | methylation data (Methylated, No Methylated or No Data)|
+
+
+
 ![table2](Images/table2.png)
 
 ![table3](Images/table3.png)
