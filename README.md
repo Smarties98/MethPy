@@ -147,6 +147,8 @@ Once the module is started, it generates a popup window asking for different inf
 
 The "Gene name" can be selected through a drop down menu, showing again all the references saved, while the "Condition's Folder" refered to the path of the folder to be tabulated. "Reference start position" is a which position the reference saved start, respecting to the one saved to in a database. "Do you want an xlsx file?" could be checked to obtain also a more graphical file in addition to the csv file.
 
+In both files there are rows with strand F-R, they have the merged information between the F and R of the same sequence.
+
 The csv file is organized as following:
 
 |   | Colony's name | Strand | list of numbers referring to the cytosines positions)|
@@ -159,7 +161,8 @@ The csv file is organized as following:
 
  
 While the xlsx  file provides the same data, enhanced with color-coded formatting.
-In the top left corner there is the color legend
+In the top left corner there is the color legend. This file is it done in a way that changing the value of a cell it recalculate the sum of methylated cytosine and the percentage for that position. In this file it is shown just the row containg F-R, all the others are just hidden.
+
 ![table2](Images/table2.png)
 
 ![table3](Images/table3.png)
