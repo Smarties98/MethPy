@@ -70,8 +70,13 @@ cwd/
 └── Table              # Where table saves the csv and xlsx files
 ```
 
-> [!TIP]
+> [!IMPORTANT]
+> Place all input data related to a single target gene and a single experimental condition within a subdirectory, which may be located inside a nested folder structure, to generate a summary table and subsequently a plot for that specific gene under that condition.
+
+> [!WARNING]
 > A nested folder structure can be created inside `./Input`, but forward and reverse sequences must be saved with the same filename, appending F or R to indicate the strand. This naming convention is required for the `table` module to correctly associate the corresponding data.
+
+
 
 #### :books: Tutorial<a name="header5"/>
 
@@ -138,9 +143,6 @@ from methpy import table
 table ()
 ```
 
-> [!TIP]
-> Place all input data related to a single target gene and a single experimental condition within a subdirectory, which may be located inside a nested folder structure, to generate a summary table and subsequently a plot for that specific gene under that condition.
-
 Once the module is started, it generates a popup window asking for different information.
 
 ![table1](Images/table1.png)
@@ -170,11 +172,18 @@ In the top left corner there is the color legend. This file is it done in a way 
 
 
 #### :bar_chart: Plot<a name="header9"/>
+The `plot.py` module can be used to plot all the data relatevely to a particular folder and save the graphs in `.\Charts`
 
 ```python
 from methpy import plot
 plot ()
 ```
+![chart1](Images/chart1.png)
+![chart2](Images/chart2.png)
+![chart3](Images/chart3.png)
+![chart4](Images/chart4.png)
+![chart5](Images/chart5.png)
+![chart6](Images/chart6.png)
 
 ## :file_folder: Project Structure<a name="header10"/>
 
