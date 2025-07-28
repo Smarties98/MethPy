@@ -59,7 +59,16 @@ Refer to the `tutorial.py` module to generate different examples to use as tutor
 from methpy import tutorial
 tutorial ()
 ```
-They will be saved in text file in `./Input/Sequence tutorial` while the relative reference is saved as TutorialF.txt (forward) and TutorialR.txt (reverse) in `./References`
+They will be saved in text file in `./Input/Sequence tutorial` while the relative reference is saved as TutorialF.txt (forward) and TutorialR.txt (reverse) in `./References`.
+
+#### :bookmark: Ref
+
+#### :heavy_check_mark: Check
+
+#### :card_file_box: Table
+
+#### :bar_chart: Plot
+
 
 ## :file_folder: Project Structure
 
