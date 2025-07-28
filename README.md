@@ -112,10 +112,10 @@ First step is to identify the beginning of the sequence compared to the referenc
 
 ![check2](Images/check2.png)
 
-The bisulfite assay converts the non-methylated cytosines in uraciles, they are converted in 
-thymines through amplification. Every other differences between sequence and reference are treated as errors.
+The bisulfite assay converts the non-methylated cytosines in uraciles, subsequently converted in thymines through amplification. Every other difference between sequence and reference is treated as a sequencing error. A new popup window is generated, with the error that is the first character displayed, and the type of error can be selected.
 
 ![check3](Images/check3.png)
+
 
 
 #### :card_file_box: Table<a name="header8"/>
