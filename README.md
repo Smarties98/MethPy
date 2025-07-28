@@ -14,14 +14,14 @@ MethPy is a Python toolkit for the analysis and visualization of DNA methylation
 2. [Installation](#header2)
 3. [Usage](#header3)
      1. [Start](#header4)
-     2. [](#header5)
-     3. [](#header6)
-     4. [](#header7)
-     5. [](#header8)
-     6. [](#header9)
-     7. [](#header10)
-4. [](#header11)
-5. [](#header12)
+     2. [Tutorial](#header5)
+     3. [Ref](#header6)
+     4. [Check](#header7)
+     5. [Table](#header8)
+     6. [plot](#header9)
+4. [Project Structure](#header10)
+5. [License](#header11)
+6. [Author](#header12)
 
 
 ## :test_tube: Main Features<a name="header1"/> 
