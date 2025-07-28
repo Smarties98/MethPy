@@ -130,8 +130,12 @@ The word file is saved in `./Output in word` and in the same subfolders present 
 
 #### :card_file_box: Table<a name="header8"/>
 Run `table.py` to generate a summary table of the data obtained from a single folder.
-[!TIP]
-Place all input data related to a single target gene and a single experimental condition within a subdirectory, which may be located inside a nested folder structure, to generate a summary table and subsequently a plot for that specific gene under that condition.
+
+> [!TIP]
+> Place all input data related to a single target gene and a single experimental condition within a subdirectory, which may be located inside a nested folder structure, to generate a summary table and subsequently a plot for that specific gene under that condition.
+
+
+
 #### :bar_chart: Plot<a name="header9"/>
 
 
