@@ -62,12 +62,22 @@ tutorial ()
 They will be saved in text file in `./Input/Sequence tutorial` while the relative reference is saved as TutorialF.txt (forward) and TutorialR.txt (reverse) in `./References`.
 
 #### :bookmark: Ref
+Use the `ref.py` module to save the reference, both the forward and the reverse, in `./References`
+```python
+from methpy import ref
+ref ()
+```
 
 #### :heavy_check_mark: Check
 
+
+
 #### :card_file_box: Table
 
+
+
 #### :bar_chart: Plot
+
 
 
 ## :file_folder: Project Structure
@@ -88,5 +98,6 @@ This project is distributed under the [MIT](./LICENSE) license.
 
 ## :technologist: Author
 
-Developer: Martina Roiati
-Corresponding Author: Andrea Fuso, PhD
+Developer: Martina Roiati<br /> 
+Corresponding Author: Andrea Fuso, PhD<br />
+Additional support provided by: Andrea Cattani and Emiliano Valente
