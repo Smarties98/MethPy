@@ -86,11 +86,13 @@ This module will generate different popup windows. If something is wrong with th
 
 The first window asks for all the information:
 
-![check](check1.png)
+![check1](check1.png)
 
-The "Gene 
+The "Gene name" should be selected from the dropdown menu while the "Path of the sequence" could be written or picked using the system’s file browser. The button "Enter" would start the module.
 
+![check2](check2.png)
 
+![check3](check3.png)
 #### :card_file_box: Table
 
 
