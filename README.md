@@ -6,7 +6,7 @@
 
 MethPy is a Python toolkit for the analysis and visualization of DNA methylation data, with features for quality control, table and graph generation, and management of reference datasets.
 
-## 🧪 Main Features
+## :test_tube: Main Features
 
 - Loading and validation of methylation data
 - Analysis and quality control (`check.py`)
@@ -15,7 +15,7 @@ MethPy is a Python toolkit for the analysis and visualization of DNA methylation
 - Table generation (`table.py`)
 - Guided execution (`start.py`, `tutorial.py`)
 
-## 🚀 Installation
+## :rocket: Installation
 
 Must have: Python ≥ 3.8 installed.
 
@@ -31,33 +31,53 @@ Using  `pip` directly:
 pip install git+https://github.com/Smarties98/MethPy.git
 ```
 
-## 🧭 Usage
+## :compass: Usage
 
-Start the main interface from the terminal with:
+Start main interface from the terminal and enter in the Python interactive interpreter by typing `python`, `python3`, or `py` in the terminal, depending on the system configuration.
 
-```bash
-python -m methpy.start
+#### :open_file_folder: Start
+Import the module `start` and call it like a function to generate all the folders:
+```python
+from methpy import start
+start ()
+```
+All generated folders are organized in the following tree structure: 
+```
+cwd/
+├── Charts             # Where plot saves charts
+├── Input              # Where to save the Input files
+├── Output in txt      # Where check saves the txt files
+├── Output in word     # Where check saves the word files
+├── References         # Where all the references are saved
+└── Table              # Where table saves the csv and xlsx files
 ```
 
-Refer to the `tutorial.py` module for practical and demonstration examples, as different OS
+#### :books: Tutorial 
 
-## 📁 Project Structure
+Refer to the `tutorial.py` module to generate different examples to use as tutorial.
+```python
+from methpy import tutorial
+tutorial ()
+```
+They will be saved in text file in `./Input/Sequence tutorial` while the relative reference is saved as TutorialF.txt (forward) and TutorialR.txt (reverse) in the References `./References`
+
+## :file_folder: Project Structure
 
 ```
 methpy/
 ├── check.py        # Data quality control
 ├── plot.py         # Graphical visualization
 ├── ref.py          # Reference management
-├── start.py        # Main entry point
+├── start.py        # Folders generation
 ├── table.py        # Table generation
-└── tutorial.py     # Examples and guide
+└── tutorial.py     # Examples
 ```
 
-## 📄 License
+## :page_facing_up: License
 
 This project is distributed under the [MIT](./LICENSE) license.
 
-## 👨‍💻 Author
+## :technologist: Author
 
 Developer: Martina Roiati
 Corresponding Author: Andrea Fuso, PhD
