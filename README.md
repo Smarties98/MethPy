@@ -155,6 +155,6 @@ This project is distributed under the [MIT](./LICENSE) license.
 
 ## :technologist: Author<a name="header12"/>
 
-Developer: Martina Roiati (email: roiati.2013400@studenti.uniroma1.it, martiroiati@gmail.com)<br /> 
-Corresponding Author: Andrea Fuso, PhD (email: andrea.fuso@uniroma1.it)<br />
+Developer: Martina Roiati (institutional email: roiati.2013400@studenti.uniroma1.it, personal email: martiroiati@gmail.com)<br /> 
+Corresponding Author: Andrea Fuso, PhD (institutional email: andrea.fuso@uniroma1.it)<br />
 Additional support provided by: Andrea Cattani and Emiliano Valente
