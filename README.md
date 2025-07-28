@@ -106,7 +106,7 @@ The first window asks for all the information:
 
 ![check1](Images/check1.png)
 
-The "Gene name" should be selected from the dropdown menu while the "Path of the sequence" could be written or picked using the system’s file browser. The button "Enter" would start the checking.
+The "Gene name" should be selected from the dropdown menu while the "Path of the sequence" could be written or picked using the system’s file browser. The Input files could be inserted in different subfolders. The button "Enter" would start the checking.
 
 First step is to identify the beginning of the sequence compared to the reference, `check.py` asks for confirmation of the start through a popup window.  
 
@@ -116,7 +116,18 @@ The bisulfite assay converts the non-methylated cytosines in uraciles, subsequen
 
 ![check3](Images/check3.png)
 
+At the end of the analysis two files are generated, a text file and a word file. 
 
+The text file is saved in `./Output in txt` and in the same subfolders present in `./Input`. It is suddived as following:
+* Name of the original file
+* positions of methylated cytosines (one for each row)
+* doubtful_c_positions
+* positions of cytosines where the methylation status in unknown (one for each row)
+* the last position analyzed
+* F o R, depending of the strand
+
+The word file is saved in `./Output in word` and in the same subfolders present in `./Input`.
+The first row is the name of the sequence, then there is which strand it is and then the actual sequence. 
 
 #### :card_file_box: Table<a name="header8"/>
 
