@@ -9,7 +9,7 @@
 
 MethPy is a Python toolkit for the analysis and visualization of DNA methylation data, with features for quality control, table and graph generation, and management of reference datasets.
 
-## Table of Contents
+## :clipboard: Table of Contents
 1. [Main Features](#header1)
 2. [Installation](#header2)
 3. [Usage](#header3)
