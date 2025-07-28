@@ -154,9 +154,12 @@ The csv file is organized as following:
 | CpG presence | |   |0 (no CpG) or  CpG |
 | 0 | | | numbers referring to the position relative to the sequence in the database |
 | 1 | Sequence name | Strand (F, R or F-R) | methylation data (Methylated, No Methylated or No Data)|
+| ...    | ...   | ...   | ...   |
+| Percentage |    |   | floating number indicating the percentage of methylation for that position |
 
-
-
+ 
+While the xlsx  file provides the same data, enhanced with color-coded formatting.
+In the top left corner there is the color legend
 ![table2](Images/table2.png)
 
 ![table3](Images/table3.png)
