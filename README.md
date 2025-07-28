@@ -178,12 +178,17 @@ The `plot.py` module can be used to plot all the data relatevely to a particular
 from methpy import plot
 plot ()
 ```
+
+The module opens a popup window asking for information:
+
 ![chart1](Images/chart1.png)
+
+"Table file name" is a drop donw menu in which the table file could be selected, "Gene name" and "Experimental condition" are not mandatory but these information will be inserted in the graph.
 ![chart2](Images/chart2.png)
 ![chart3](Images/chart3.png)
-![chart4](Images/chart4.png)
-![chart5](Images/chart5.png)
-![chart6](Images/chart6.png)
+![chart4](Images/chart4.jpg)
+![chart5](Images/chart5.jpg)
+![chart6](Images/chart6.jpg)
 
 ## :file_folder: Project Structure<a name="header10"/>
 
