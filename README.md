@@ -67,10 +67,22 @@ Use the `ref.py` module to save the reference, both the forward and the reverse,
 from methpy import ref
 ref ()
 ```
+
+The module generates a popup window in which all the info could be added:
+
 ![ref](ref.png)
 
-#### :heavy_check_mark: Check
+If characters different from the ones related to the nucleotides (A,T,C,G) are inserted they are conserved in the text files (both in the forward and reverse) but a warning is printed. 
 
+
+#### :heavy_check_mark: Check
+To start the analysis use `check.py`.
+
+```python
+from methpy import check
+check ()
+```
+This module will generate different popup windows. If something is wrong with the info provided the module prints a warning message.
 
 
 #### :card_file_box: Table
