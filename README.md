@@ -80,7 +80,7 @@ tutorial ()
 They will be saved in text file in `./Input/Sequence tutorial` while the relative reference is saved as TutorialF.txt (forward) and TutorialR.txt (reverse) in `./References`.
 
 #### :bookmark: Ref<a name="header6"/>
-Use the `ref.py` module to save the reference, both the forward and the reverse, in `./References`
+Use the `ref.py` module to save a reference, both the forward and the reverse, in `./References`
 ```python
 from methpy import ref
 ref ()
@@ -90,7 +90,7 @@ The module generates a popup window in which all the info could be added:
 
 ![ref](Images/ref.png)
 
-If characters different from the ones related to the nucleotides (A,T,C,G) are inserted they are conserved in the text files (both in the forward and reverse) but a warning is printed. 
+If characters different from the ones related to the nucleotides (A,T,C,G) are inserted in the sequence, they are conserved in the text files (both in the forward and reverse) but a warning is printed. 
 
 
 #### :heavy_check_mark: Check<a name="header7"/>
