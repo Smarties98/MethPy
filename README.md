@@ -183,8 +183,13 @@ The module opens a popup window asking for information:
 
 ![chart1](Images/chart1.png)
 
-"Table file name" is a drop donw menu in which the table file could be selected, "Gene name" and "Experimental condition" are not mandatory but these information will be inserted in the graph.
+"Table file name" is a drop donw menu in which the table file could be selected, "Gene name" and "Experimental condition" are not mandatory but these information will be inserted in the graph. The risolution can be changed entering a value in the specific text box. The extension can be selected among .tif, .pdf and .jpg. The button referring to "Custom settings for base range and errors" open the following window:
+
 ![chart2](Images/chart2.png)
+
+In this a specific range of bases to take into consideration can be specified. If a number is inserted in "Same error value for all the bases" that value is used to add an error bar to all the cytosine present in the graph, while "Custom errors for each base; enter a comma-separated list of numbers" takes a list separated to comma and at each cytosine adds a different error bar, if the values are not enough, the last cytosines will have an error of zero. "Dysplay the error cap" can be checked to add the error caps to the error bars.
+
+The button referring to "Custom chart colors" open the following window:
 ![chart3](Images/chart3.png)
 ![chart4](Images/chart4.jpg)
 ![chart5](Images/chart5.jpg)
