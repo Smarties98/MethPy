@@ -88,11 +88,18 @@ The first window asks for all the information:
 
 ![check1](check1.png)
 
-The "Gene name" should be selected from the dropdown menu while the "Path of the sequence" could be written or picked using the system’s file browser. The button "Enter" would start the module.
+The "Gene name" should be selected from the dropdown menu while the "Path of the sequence" could be written or picked using the system’s file browser. The button "Enter" would start the checking.
+
+First step is to identify the beginning of the sequence compared to the reference, `check.py` asks for confirmation of the start through a popup window.  
 
 ![check2](check2.png)
 
+The bisulfite assay converts the non-methylated cytosines in uraciles, they are converted in 
+thymines through amplification. Every other differences between sequence and reference are treated as errors.
+
 ![check3](check3.png)
+
+
 #### :card_file_box: Table
 
 
