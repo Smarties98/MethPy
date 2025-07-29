@@ -55,6 +55,9 @@ pip install git+https://github.com/Smarties98/MethPy.git
 
 Launch the main interface from the terminal, and enter the Python interactive interpreter by typing `python`, `python3`, or `py` in the terminal, depending on the system configuration.
 
+> [!CAUTION]
+> On macOS systems, once the function prints that it has completed, pop-up windows must be closed manually.
+
 #### :open_file_folder: Start<a name="header4"/>
 Import the `start` module and call it like a function to generate all required folders: 
 
@@ -102,7 +105,7 @@ from methpy import ref
 ref ()
 ```
 
-The module generates a popup window where all the necessary information can be entered:
+The module generates a pop-up window where all the necessary information can be entered:
 
 ![ref](Images/ref.png)
 
@@ -116,7 +119,7 @@ from methpy import check
 check ()
 ```
 
-This module will generate several popup windows. If there is an issue with the provided information, the module will print a warning message.
+This module will generate several pop-up windows. If there is an issue with the provided information, the module will print a warning message.
 
 The first window asks for all the necessary information:
 
@@ -124,11 +127,11 @@ The first window asks for all the necessary information:
 
 The "Gene name" should be selected from the dropdown menu, while the "Path of the sequence" can be typed or selected using the system’s file browser. Input files can be placed in different subfolders. The "Enter" button starts the checking process.
 
-The first step is to identify the beginning of the sequence relative to the reference. The `check` module asks for confirmation of the start through a popup window:
+The first step is to identify the beginning of the sequence relative to the reference. The `check` module asks for confirmation of the start through a pop-up window:
 
 ![check2](Images/check2.png)
 
-The bisulfite assay converts unmethylated cytosines into uracils, which are subsequently converted into thymines during amplification. Every other difference between the sequence and the reference is treated as a sequencing error. A new popup window appears, showing multiple characters with the first one being the error, allowing the user to select the error type:
+The bisulfite assay converts unmethylated cytosines into uracils, which are subsequently converted into thymines during amplification. Every other difference between the sequence and the reference is treated as a sequencing error. A new pop-up window appears, showing multiple characters with the first one being the error, allowing the user to select the error type:
 
 ![check3](Images/check3.png)
 
@@ -153,7 +156,7 @@ from methpy import table
 table ()
 ```
 
-Once the module starts, it generates a popup window asking for various pieces of information.
+Once the module starts, it generates a pop-up window asking for various pieces of information.
 
 ![table1](Images/table1.png)
 
@@ -183,7 +186,7 @@ from methpy import plot
 plot ()
 ```
 
-The module opens a popup window asking for information:
+The module opens a pop-up window asking for information:
 
 ![chart1](Images/chart1.png)
 
