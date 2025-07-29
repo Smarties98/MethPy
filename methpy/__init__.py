@@ -459,6 +459,7 @@ class Chart_info:
             global error_cap
             def choose_color_cpg ():
                 global bg_cpg
+                ### devo salvare il colore
                 color_cpg = askcolor (title = "Choose color for CpG", parent = window_color)
                 if type(color_cpg) == tuple and color_cpg[1] is not None:
                     self.response ["cpg color"] = color_cpg [1]
