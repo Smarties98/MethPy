@@ -579,7 +579,7 @@ class Chart_info:
             font = ("", 15)
         else: font = ("", 13)
         root = tk.Tk ()
-        root.geometry ("770x420")
+        root.geometry ("770x430")
         clicked = tk.StringVar ()
         list_exel.insert (0, "Select")
         label_file_name = ttk.Label (root, text = "Table file name", font = font)
