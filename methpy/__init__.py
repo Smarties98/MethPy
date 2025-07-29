@@ -53,7 +53,10 @@ class Reference:
         def save ():
             self.response ["name"] = entry_name.get ()
             self.response ["sequence"] = entry_sequence.get ()
-            popup.destroy ()
+
+            if sys.platform.startswith ('darwin'): 
+                popup.exit ()
+            else: popup.destroy ()
 
         #popup characteristics
         if sys.platform.startswith ('darwin'): 
