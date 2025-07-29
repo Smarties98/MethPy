@@ -243,19 +243,19 @@ def find_start (reference_forward, reference_reverse, sequence, number):
                 root.wm_title ("Is this the right start?")
                 if sys.platform.startswith ('darwin'): 
                     font = ("Courier New", 16)
-                else: font = ("Courier New", 13)       
-                label = tk.Label (root, text = text, font = font)
-                label.grid (row = 0, column = 0, padx = 10, pady = 10, ipadx = 20)
-                if sys.platform.startswith ('darwin'): 
                     button1 = tk.Button(root, text = "Yes", width = 10, command = right, fg="green")
-                else:
+                    button2 = tk.Button (root, text = "No", width = 10, command = wrong, fg="red")                    
+                else: 
+                    font = ("Courier New", 13)                    
                     style_b1 = ttk.Style()
                     style_b1.configure ("B1.TButton", foreground = "green")
                     button1 = ttk.Button (root, text = "Yes", width = 10, command = right, style = "B1.TButton")
+                    style_b2 = ttk.Style ()
+                    style_b2.configure ("B2.TButton" , foreground = "red")
+                    button2 = ttk.Button (root, text = "No", width = 10, command = wrong, style = "B2.TButton")       
+                label = tk.Label (root, text = text, font = font)
+                label.grid (row = 0, column = 0, padx = 10, pady = 10, ipadx = 20)
                 button1.place (rely = 0.75, relx = 0.25, anchor = "center")
-                style_b2 = ttk.Style ()
-                style_b2.configure ("B2.TButton" , foreground = "red")
-                button2 = ttk.Button (root, text = "No", width = 10, command = wrong, style = "B2.TButton")
                 button2.place (rely = 0.75, relx = 0.75, anchor = "center" )
                 style_b3 = ttk.Style()
                 style_b3.configure ("B3.TButton" , foreground = "black")
@@ -378,7 +378,8 @@ class Table_info:
         root.geometry ("750x250")
         if sys.platform.startswith ('darwin'): 
             font = ("", 15)
-        else: font = ("", 13) 
+        else: 
+            font = ("", 13)
         clicked1 = tk.StringVar ()
         list_without_FRtxt.insert (0, "Select")
         drop1 = ttk.OptionMenu (root, clicked1, *list_without_FRtxt)
@@ -502,18 +503,21 @@ class Chart_info:
             def save_colors_popup ():
                 window_color.destroy ()
             
-            if sys.platform.startswith ('darwin'): 
-                font = ("", 15)
-            else: font = ("", 13)            
             window_color = tk.Toplevel(root)
             window_color.geometry ("580x220")
+            if sys.platform.startswith ('darwin'): 
+                font = ("", 15)
+                button_color_cpg = tk.Button (window_color, text = "Color of CpG", command = choose_color_cpg, fg = bg_cpg) 
+                button_color_non_cpg = tk.Button (window_color, text = "Color of non-CpG", command = choose_color_non_cpg, fg = bg_non_cpg) 
+            else: 
+                font = ("", 13)
+                button_color_cpg = tk.Button (window_color, text = "Color of CpG", command = choose_color_cpg, bg = bg_cpg)               
+                button_color_non_cpg = tk.Button (window_color, text = "Color of non-CpG", command = choose_color_non_cpg, bg = bg_non_cpg)           
             label_color_cpg = ttk.Label (window_color, text = "Color of CpG", font = font)
-            label_color_cpg.grid (row = 0, column = 0, padx = 10, pady = 10, ipadx = 10)
-            button_color_cpg = tk.Button (window_color, text = "Color of CpG", command = choose_color_cpg, bg = bg_cpg)
+            label_color_cpg.grid (row = 0, column = 0, padx = 10, pady = 10, ipadx = 10)       
             button_color_cpg.grid (row = 0, column = 1, padx = 10, pady = 10, ipadx = 70)
             label_color_non_cpg = ttk.Label (window_color, text = "Color of non-CpG", font = font)
             label_color_non_cpg.grid (row = 1, column = 0, padx = 10, pady = 10, ipadx = 10)
-            button_color_non_cpg = tk.Button (window_color, text = "Color of non-CpG", command = choose_color_non_cpg, bg = bg_non_cpg)
             button_color_non_cpg.grid (row = 1, column = 1, padx = 10, pady = 10, ipadx = 70)
             label_mean_over_bar = ttk.Label (window_color, text = "Display the percentage for each bar", font = font)
             label_mean_over_bar.grid (row = 3, column = 0, padx = 10, pady = 10, ipadx = 10)
