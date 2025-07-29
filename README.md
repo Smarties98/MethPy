@@ -22,7 +22,7 @@ MethPy is a Python toolkit for the analysis and visualization of DNA methylation
 4. [Project Structure](#header10)
 5. [License](#header11)
 6. [Author](#header12)
-7. [How to cite] (#header13)
+7. [How to cite](#header13)
 
 
 ## :gear: Main Features<a name="header1"/> 
@@ -227,4 +227,4 @@ Developer: Martina Roiati (institutional email: roiati.2013400@studenti.uniroma1
 Corresponding Author: Andrea Fuso, PhD (institutional email: andrea.fuso@uniroma1.it)<br />
 Additional support provided by: Andrea Cattani and Emiliano Valente
 
-## :open_book: How to cite <a name="header13"/>
+## :open_book: How to cite<a name="header13"/>
