@@ -7,7 +7,7 @@
 
 
 
-MethPy is a Python toolkit for the analysis and visualization of DNA methylation data, with features for quality control, table and graph generation, and management of reference datasets.
+MethPy is a Python toolkit for the analysis and visualization of DNA methylation data, with features for quality control, table and graph generation, and reference dataset management.
 
 ## :pushpin: Table of Contents
 1. [Main Features](#header1)
@@ -22,20 +22,22 @@ MethPy is a Python toolkit for the analysis and visualization of DNA methylation
 4. [Project Structure](#header10)
 5. [License](#header11)
 6. [Author](#header12)
+7. [How to cite] (#header13)
 
 
 ## :gear: Main Features<a name="header1"/> 
 
-- Loading and validation of methylation data
-- Analysis and quality control (`check.py`)
-- Visualization of results (`plot.py`)
-- Management of biological references (`ref.py`)
-- Table generation (`table.py`)
-- Guided execution (`start.py`, `tutorial.py`)
+- Loading and validating methylation data
+- Performing analysis and quality control (`check.py`)
+- Visualizing results (`plot.py`)
+- Managing biological references (`ref.py`)
+- Generating tables (`table.py`)
 
 ## :rocket: Installation<a name="header2"/>
 
-Must have: Python ≥ 3.8 installed.
+Python ≥ 3.8 must be installed.
+
+To install via cloning the repository:
 
 ```bash
 git clone https://github.com/Smarties98/MethPy.git
@@ -43,7 +45,7 @@ cd MethPy
 pip install .
 ```
 
-Using  `pip` directly:
+Or install directly using `pip`:
 
 ```bash
 pip install git+https://github.com/Smarties98/MethPy.git
@@ -51,107 +53,115 @@ pip install git+https://github.com/Smarties98/MethPy.git
 
 ## :compass: Usage<a name="header3"/>
 
-Start main interface from the terminal and enter in the Python interactive interpreter by typing `python`, `python3`, or `py` in the terminal, depending on the system configuration.
+Launch the main interface from the terminal, and enter the Python interactive interpreter by typing `python`, `python3`, or `py` in the terminal, depending on the system configuration.
 
 #### :open_file_folder: Start<a name="header4"/>
-Import the module `start` and call it like a function to generate all the folders:
+Import the `start` module and call it like a function to generate all required folders: 
+
 ```python
 from methpy import start
 start ()
 ```
-All generated folders are organized in the following tree structure: 
+
+All generated folders are organized in the following directory structure: 
+
 ```
 cwd/
-├── Charts             # Where plot saves charts
-├── Input              # Where to save the Input files
-├── Output in txt      # Where check saves the txt files
-├── Output in word     # Where check saves the word files
-├── References         # Where all the references are saved
-└── Table              # Where table saves the csv and xlsx files
+├── Charts             # Where `plot` saves charts
+├── Input              # Where to save the input files
+├── Output in txt      # Where `check` saves the .txt files
+├── Output in word     # Where `check` saves the Word files
+├── References         # Where all the references are stored
+└── Table              # Where `table` saves the csv and xlsx files
 ```
 
 > [!IMPORTANT]
-> Place all input data related to a single target gene and a single experimental condition within a subdirectory, which may be located inside a nested folder structure, to generate a summary table and subsequently a plot for that specific gene under that condition.
+> Place all input data related to a single target gene and a single experimental condition within a subdirectory. This subdirectory may be nested within other folders. This structure is necessary to generate a summary table and, subsequently, a plot for that specific gene under that condition.
 
 > [!WARNING]
-> A nested folder structure can be created inside `./Input`, but forward and reverse sequences must be saved with the same filename, appending F or R to indicate the strand. This naming convention is required for the `table` module to correctly associate the corresponding data.
+> A nested folder structure can be created inside `./Input`, but forward and reverse sequences must have the same filename, with F or R appended to indicate the strand. This naming convention is required for the `table` module to correctly associate the corresponding data.
 
 
 
 #### :books: Tutorial<a name="header5"/>
 
-Refer to the `tutorial.py` module to generate different examples to use as tutorial.
+Refer to the `tutorial` module to generate examples files that can be used as tutorial.
+
 ```python
 from methpy import tutorial
 tutorial ()
 ```
-They will be saved in text file in `./Input/Sequence tutorial` while the relative reference is saved as TutorialF.txt (forward) and TutorialR.txt (reverse) in `./References`.
+
+They will be saved as text file in `./Input/Sequence tutorial`, while the corresponding references will be saved as `TutorialF.txt` (forward) and `TutorialR.txt` (reverse) in `./References`.
 
 #### :bookmark: Ref<a name="header6"/>
-Use the `ref.py` module to save a reference, both the forward and the reverse, in `./References`
+Use the `ref` module to save a reference — both the forward and the reverse — in `./References`.
+
 ```python
 from methpy import ref
 ref ()
 ```
 
-The module generates a popup window in which all the info could be added:
+The module generates a popup window where all the necessary information can be entered:
 
 ![ref](Images/ref.png)
 
-If characters different from the ones related to the nucleotides (A,T,C,G) are inserted in the sequence, they are conserved in the text files (both in the forward and reverse) but a warning is printed. 
-
+If characters other than standard nucleotides (A, T, C, G) are included in the sequence, they are retained in the text files (both forward and reverse), but a warning is printed.
 
 #### :heavy_check_mark: Check<a name="header7"/>
-To start the analysis use `check.py`.
+To start the analysis use the `check` module.
 
 ```python
 from methpy import check
 check ()
 ```
-This module will generate different popup windows. If something is wrong with the info provided the module prints a warning message.
 
-The first window asks for all the information:
+This module will generate several popup windows. If there is an issue with the provided information, the module will print a warning message.
+
+The first window asks for all the necessary information:
 
 ![check1](Images/check1.png)
 
-The "Gene name" should be selected from the dropdown menu while the "Path of the sequence" could be written or picked using the system’s file browser. The Input files could be inserted in different subfolders. The button "Enter" would start the checking.
+The "Gene name" should be selected from the dropdown menu, while the "Path of the sequence" can be typed or selected using the system’s file browser. Input files can be placed in different subfolders. The "Enter" button starts the checking process.
 
-First step is to identify the beginning of the sequence compared to the reference, `check.py` asks for confirmation of the start through a popup window.  
+The first step is to identify the beginning of the sequence relative to the reference. The `check` module asks for confirmation of the start through a popup window:
 
 ![check2](Images/check2.png)
 
-The bisulfite assay converts the non-methylated cytosines in uraciles, subsequently converted in thymines through amplification. Every other difference between sequence and reference is treated as a sequencing error. A new popup window is generated, with the error that is the first character displayed, and the type of error can be selected.
+The bisulfite assay converts unmethylated cytosines into uracils, which are subsequently converted into thymines during amplification. Every other difference between the sequence and the reference is treated as a sequencing error. A new popup window appears, showing multiple characters with the first one being the error, allowing the user to select the error type:
 
 ![check3](Images/check3.png)
 
-At the end of the analysis two files are generated, a text file and a word file. 
+At the end of the analysis, two files are generated: a text file and a Word file.
 
-The text file is saved in `./Output in txt` and in the same subfolders present in `./Input`. It is suddived as following:
+The text file is saved in `./Output in txt` within the same subfolders present in `./Input`.
+It is organized as follows:
 * Name of the original file
-* positions of methylated cytosines (one for each row)
-* doubtful_c_positions
-* positions of cytosines where the methylation status in unknown (one for each row)
-* the last position analyzed
-* F o R, depending of the strand
+* Positions of methylated cytosines (one per row)
+* `doubtful_c_positions`
+* Positions of cytosines where the methylation status is unknown (one per row)
+* The last position analyzed
+* F o R, depending on the strand
 
-The word file is saved in `./Output in word` and in the same subfolders present in `./Input`. The first row is the name of the sequence, then there is which strand it is and then the actual sequence. It is divided in blocks of ten nucleotides and in the left there is the position of the first base relatively to the beginning of the reference. All the error and cytosine, or converted cytosine, are highlighted, the color code is explained in the document together with some positions that could be interesting, i.e. where there is an insertion (in that case the nucleotide is removed and the info can be useful where checking the input sequence), all the positions where there is a methylated cytosine and all the ones of cytosines with an unkown methylation status.
+The word file is saved in `./Output in word` within the same subfolders present in `./Input`. The first row shows the name of the sequence, followed by the strand information, then the actual sequence. It is divided into blocks of ten nucleotides. On the left, the position of the first base relative to the beginning of the reference is shown. All errors and cytosines (or converted cytosines) are highlighted. The color code is explained in the document, along with some positions of interest — for example, where there is an insertion (in this case, the nucleotide is removed, and this information is useful when checking the input sequence), all positions with methylated cytosines, and those with unknown methylation status.
 
 #### :card_file_box: Table<a name="header8"/>
-Run `table.py` to generate a summary table of the data obtained from a single folder.
+Run `table` to generate a summary table of the data obtained from a single folder.
+
 ```python
 from methpy import table
 table ()
 ```
 
-Once the module is started, it generates a popup window asking for different information.
+Once the module starts, it generates a popup window asking for various pieces of information.
 
 ![table1](Images/table1.png)
 
-The "Gene name" can be selected through a drop down menu, showing again all the references saved, while the "Condition's Folder" refered to the path of the folder to be tabulated. "Reference start position" is a which position the reference saved start, respecting to the one saved to in a database. "Do you want an xlsx file?" could be checked to obtain also a more graphical file in addition to the csv file.
+The "Gene name" can be selected through a dropdown menu, showing all saved references. The "Condition's Folder" refers to the path of the folder to be tabulated. "Reference start position" indicates the position at which the saved reference starts, relative to the one stored in the database. Checking "Do you want an xlsx file?" will generate an additional, more graphical file alongside the CSV file.
 
-In both files there are rows with strand F-R, they have the merged information between the F and R of the same sequence.
+Both files contain rows with strand information F, R, and F-R, which merge data from the forward and reverse strands of the same sequence.
 
-The csv file is organized as following:
+The CSV file is organized as following:
 
 |   | Colony's name | Strand | list of numbers referring to the cytosines positions)|
 | ------------- | ------------- |------------- |------------- |
@@ -161,18 +171,12 @@ The csv file is organized as following:
 | ...    | ...   | ...   | ...   |
 | Percentage |    |   | floating number indicating the percentage of methylation for that position |
 
- 
-While the xlsx  file provides the same data, enhanced with color-coded formatting.
-In the top left corner there is the color legend. This file is it done in a way that changing the value of a cell it recalculate the sum of methylated cytosine and the percentage for that position. In this file it is shown just the row containg F-R, all the others are just hidden.
-
-![table2](Images/table2.png)
+The XLSX file provides the same data, enhanced with color-coded formatting. In the top-left corner, there is a color legend. This file is designed so that changing the value of a cell recalculates the sum of methylated cytosines and the percentage for that position. Only the row containing F-R is shown; all other rows are hidden.
 
 ![table3](Images/table3.png)
 
-
-
 #### :bar_chart: Plot<a name="header9"/>
-The `plot.py` module can be used to plot all the data relatevely to a particular folder and save the graphs in `.\Charts`
+The `plot` module can be used to plot all the data related to a particular folder and save the graphs in `.\Charts`
 
 ```python
 from methpy import plot
@@ -183,19 +187,19 @@ The module opens a popup window asking for information:
 
 ![chart1](Images/chart1.png)
 
-"Table file name" is a drop donw menu in which the table file could be selected, "Gene name" and "Experimental condition" are not mandatory but these information will be inserted in the graph. The risolution can be changed entering a value in the specific text box. The extension can be selected among .tif, .pdf and .jpg. The button referring to "Custom settings for base range and errors" open the following window:
+The "Table file name" is a dropdonw menurom which the table file can be selected. "Gene name" and "Experimental condition" are optional but will be included in the graph. The resolution can be changed by entering a value in the specific text box. The file extension can be selected among `.tif`, `.pdf` and `.jpg`. The "Click me!" button referring to "Custom settings for base range and errors" opens the following window:
 
 ![chart2](Images/chart2.png)
 
-In this a specific range of bases to take into consideration can be specified. If a number is inserted in "Same error value for all the bases" that value is used to add an error bar to all the cytosine present in the graph, while "Custom errors for each base; enter a comma-separated list of numbers" takes a list separated to comma and at each cytosine adds a different error bar, if the values are not enough, the last cytosines will have an error of zero. "Dysplay the error cap" can be checked to add the error caps to the error bars.
+Here, a specific range of bases to consider can be specified. If a number is entered in "Same error value for all the bases", that value is used to add an error bar to all cytosine present in the graph. The option "Custom errors for each base; enter a comma-separated list of numbers" allows inputting a comma-separated list of values, assigning a different error bar to each cytosine; if there are fewer values than cytosines, the remaining cytosines will have an error of zero. Checking "Dysplay the error cap" will add caps to the error bars.
 
-The button referring to "Custom chart colors" open the following window:
+The button "Click me!" referring to "Custom chart colors" opens the following window:
 
 ![chart3](Images/chart3.png)
 
-In this window the colors of the bars can be selected as well as if displaing or not the percentage over each bar. The initial colors are red for the CpG cytosines and gray for the non-CpG ones. After the first time if new colors are selected they are saved and showed as the new default colors. The choice about displaying the error cap and the percentage for each bar is saved.
+In this window, the colors of the bars can be selected, as well as whether to display the percentage over each bar. The initial colors are red for CpG cytosines and gray for non-CpG ones. After the first use, if new colors are selected, they are saved and shown as the new default colors. The choices regarding displaying the error cap and the percentage for each bar are also saved.
 
-The main graph produced is one that contains both CpG and non-CpG cytosines. But other two graphs are produced, one with just the Cpg and the other with just the non-CpG.
+The main graph produced contains both CpG and non-CpG cytosines. Additionally, two other graphs are generated: one with only Cpg cytosines and another with only non-CpG cytosines.
 
 ![chart4](Images/chart4.jpg)
 ![chart5](Images/chart5.jpg)
@@ -222,3 +226,5 @@ This project is distributed under the [MIT](./LICENSE) license.
 Developer: Martina Roiati (institutional email: roiati.2013400@studenti.uniroma1.it, personal email: martiroiati@gmail.com)<br /> 
 Corresponding Author: Andrea Fuso, PhD (institutional email: andrea.fuso@uniroma1.it)<br />
 Additional support provided by: Andrea Cattani and Emiliano Valente
+
+## :open_book: How to cite <a name="header13"/>
