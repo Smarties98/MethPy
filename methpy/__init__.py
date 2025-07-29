@@ -76,6 +76,8 @@ class Reference:
         save_button = ttk.Button (popup, text = "Save", width = 10, command = save)
         save_button.place (rely = 0.75,relx = 0.5, anchor = "center")
 
+        if sys.platform.startswith ('darwin'): 
+            popup.destroy ()
         tk.mainloop ()
 
 #to check all the positions where a substring is present
