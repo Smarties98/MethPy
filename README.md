@@ -187,7 +187,7 @@ The module opens a popup window asking for information:
 
 ![chart1](Images/chart1.png)
 
-The "Table file name" is a dropdonw menurom which the table file can be selected. "Gene name" and "Experimental condition" are optional but will be included in the graph. The resolution can be changed by entering a value in the specific text box. The file extension can be selected among `.tif`, `.pdf` and `.jpg`. The "Click me!" button referring to "Custom settings for base range and errors" opens the following window:
+The "Table file name" is a dropdown menu in which the table file can be selected. "Gene name" and "Experimental condition" are optional but will be included in the graph. The resolution can be changed by entering a value in the specific text box. The file extension can be selected among `.tif`, `.pdf` and `.jpg`. The "Click me!" button referring to "Custom settings for base range and errors" opens the following window:
 
 ![chart2](Images/chart2.png)
 
