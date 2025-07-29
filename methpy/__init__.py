@@ -134,7 +134,10 @@ class Gene_name:
         def enter():
             self.response ["reference"] = clicked.get ()
             self.response ["file"] = entry.get ()
-            root.destroy () 
+            if sys.platform.startswith ('darwin'): 
+                root.quit ()
+            else: root.destroy ()
+
         
         #popup characteristics
         root = tk.Tk ()
@@ -176,17 +179,23 @@ def find_start (reference_forward, reference_reverse, sequence, number):
                 self.response ["stop"] = True
                 self.response ["position_to_use"] = position_to_use
                 self.response ["reference_position"] = reference_position
-                root.quit ()
+                if sys.platform.startswith ('darwin'): 
+                    root.quit ()
+                else: root.destroy ()
             
             #if it is the wrong start, the popup closes and it checks for another possible start
             def wrong ():
-                root.quit ()
+                if sys.platform.startswith ('darwin'): 
+                    root.quit ()
+                else: root.destroy ()
 
             #if you cannot find a start, it just closes everything and prints a warning
             def start_not_found ():
                 self.response ["button"] = "Start not found"
                 self.response ["stop"] = True
-                root.quit ()
+                if sys.platform.startswith ('darwin'): 
+                    root.quit ()
+                else: root.destroy ()
 
             m = position_to_use
             n = reference_position
@@ -251,7 +260,6 @@ def find_start (reference_forward, reference_reverse, sequence, number):
                 button3.place (rely = 0.75, relx = 0.5, anchor = "center")
 
                 tk.mainloop ()
-                root.destroy ()
 
     try: 
         #it checks a range of 10nt at the start
@@ -352,7 +360,9 @@ class Table_info:
             self.response ["gene name"] = clicked1.get () 
             self.response ["condition path"] = entry2.get ()
             self.response ["start position"] = entry3.get ()
-            root.destroy () 
+            if sys.platform.startswith ('darwin'): 
+                root.quit ()
+            else: root.destroy ()
         def choose_xlsx_file ():
             global xlsx_file
             if xlsx.get ():
@@ -436,7 +446,9 @@ class Chart_info:
             self.response ["condition name"] = entry_condition_name.get ()
             self.response ["extension"] = clicked_extensions.get ()
             self.response ["resolution"] = entry_resolution.get ()
-            root.destroy ()
+            if sys.platform.startswith ('darwin'): 
+                root.quit ()
+            else: root.destroy ()
         
         #popup to choose the color for both CpG and non-CpG
         def popup_color ():
