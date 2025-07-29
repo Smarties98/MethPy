@@ -246,9 +246,12 @@ def find_start (reference_forward, reference_reverse, sequence, number):
                 else: font = ("Courier New", 13)       
                 label = tk.Label (root, text = text, font = font)
                 label.grid (row = 0, column = 0, padx = 10, pady = 10, ipadx = 20)
-                style_b1 = ttk.Style()
-                style_b1.configure ("B1.TButton", foreground = "green")
-                button1 = ttk.Button (root, text = "Yes", width = 10, command = right, style = "B1.TButton")
+                if sys.platform.startswith ('darwin'): 
+                    button1 = tk.Button(root, text = "Yes", width = 10, command = right, fg="green")
+                else:
+                    style_b1 = ttk.Style()
+                    style_b1.configure ("B1.TButton", foreground = "green")
+                    button1 = ttk.Button (root, text = "Yes", width = 10, command = right, style = "B1.TButton")
                 button1.place (rely = 0.75, relx = 0.25, anchor = "center")
                 style_b2 = ttk.Style ()
                 style_b2.configure ("B2.TButton" , foreground = "red")
