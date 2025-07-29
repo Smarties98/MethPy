@@ -46,24 +46,21 @@ def seq_demethylated (sequence, position_methylated):
     return sequence
 
 class Reference:
-    def __init__ (self):
+    def __init__ (self,master):
         
         self.response = {"name":"", "sequence":""}
         #the popup takes the name and sequence of the reference
         def save ():
             self.response ["name"] = entry_name.get ()
             self.response ["sequence"] = entry_sequence.get ()
-            if sys.platform.startswith ('darwin'): 
-                popup.quit ()
-                popup.destroy ()
-
-            else: popup.destroy ()
+            popup.destroy ()
 
         #popup characteristics
         if sys.platform.startswith ('darwin'): 
             font = ("", 15)
         else: font = ("", 13)
-        popup = tk.Tk ()
+
+        popup = tk.Toplevel(master)
         popup.geometry ("600x150")
         popup.title ("References creation")
         label_name = ttk.Label (popup, text = "Reference name", font = font)
@@ -77,7 +74,8 @@ class Reference:
         save_button = ttk.Button (popup, text = "Save", width = 10, command = save)
         save_button.place (rely = 0.75,relx = 0.5, anchor = "center")
 
-        tk.mainloop ()
+        popup.grab_set()
+        master.wait_window(popup)
 
 #to check all the positions where a substring is present
 def find_all (string, substring): 
