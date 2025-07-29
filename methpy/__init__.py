@@ -473,8 +473,8 @@ class Chart_info:
                         else:
                             self.response ["cpg color"] = "red"
                             bg_cpg = "red"  
-                button_color_cpg.configure (background = bg_cpg)
-                
+                if sys.platform.startswith ('darwin'): button_color_cpg.configure (foreground = bg_cpg)
+                else:   button_color_non_cpg.configure (background = bg_cpg)
             def choose_color_non_cpg ():
                 global bg_non_cpg
                 color_non_cpg = askcolor (title = "Choose color for non-CpG", parent = window_color)
@@ -491,7 +491,8 @@ class Chart_info:
                         else:
                             self.response ["color_non_cpg"] = "gray"
                             bg_non_cpg = "gray"
-                button_color_non_cpg.configure (background = bg_non_cpg)
+                if sys.platform.startswith ('darwin'): button_color_non_cpg.configure (foreground = bg_non_cpg)
+                else:   button_color_non_cpg.configure (background = bg_non_cpg)
             
             def choose_text ():
                 global text_over_bar
