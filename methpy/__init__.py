@@ -53,9 +53,10 @@ class Reference:
         def save ():
             self.response ["name"] = entry_name.get ()
             self.response ["sequence"] = entry_sequence.get ()
-
             if sys.platform.startswith ('darwin'): 
                 popup.quit ()
+                popup.destroy ()
+
             else: popup.destroy ()
 
         #popup characteristics
@@ -75,8 +76,6 @@ class Reference:
         entry_sequence.grid (row = 1, column = 1, padx = 10, pady = 10, ipadx = 80)
         save_button = ttk.Button (popup, text = "Save", width = 10, command = save)
         save_button.place (rely = 0.75,relx = 0.5, anchor = "center")
-        if sys.platform.startswith ('darwin'): 
-            popup.destroy ()
 
         tk.mainloop ()
 
